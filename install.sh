@@ -10,4 +10,7 @@ wine 3d-pinball-space-cadet-1.0-installer.exe
 apt install ubuntu-unity-desktop
 cp /usr/share/unity/icons/launcher_bfb.png /home/
 cp ./launcher_bfb.png /usr/share/unity/icons/launcher_bfb.png
+apt install steam
+apt install arduino
+apt install snapd
 
