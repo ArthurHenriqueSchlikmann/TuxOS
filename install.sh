@@ -6,4 +6,8 @@ wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/w
 wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources
 apt update
 apt install winehq-stable
+wine 3d-pinball-space-cadet-1.0-installer.exe
+apt install ubuntu-unity-desktop
+cp /usr/share/unity/icons/launcher_bfb.png /home/
+cp ./launcher_bfb.png /usr/share/unity/icons/launcher_bfb.png
 
