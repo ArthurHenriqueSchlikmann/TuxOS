@@ -1,3 +1,4 @@
+if[[$(whoami) = "root"]] then
 dire="null"
 cd /tmp/
 wget https://github.com/ArthurHenriqueSchlikmann/TuxOS/releases/download/tag/pkg.tar.xz
@@ -20,3 +21,9 @@ apt install snapd
 apt install idle
 systemctl start snapd
 systemctl enable snapd
+snap install pycharm-community
+flatpak install edu.mit.Scratch
+flatpak install org.apache.netbeans
+else
+	echo "Você precisa ser root para executar a instalação do TuxOS"
+fi
