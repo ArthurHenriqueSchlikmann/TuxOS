@@ -18,4 +18,5 @@ rm /etc/apt/preferences.d/nosnap.pref
 apt update
 apt install snapd
 apt install idle
-
+systemctl start snapd
+systemctl enable snapd
