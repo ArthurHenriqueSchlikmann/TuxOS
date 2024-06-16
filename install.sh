@@ -12,9 +12,6 @@ apt update
 apt install winehq-stable
 wine 3d-pinball-space-cadet-1.0-installer.exe
 apt install ubuntu-unity-desktop
-read -p "Diretório para salvar o arquivo do dash(qualquer um): " dire
-cp /usr/share/unity/icons/launcher_bfb.png $dire
-cp ./launcher_bfb.png /usr/share/unity/icons/launcher_bfb.png
 apt install steam
 apt install arduino
 rm /etc/apt/preferences.d/nosnap.pref
@@ -26,6 +23,7 @@ systemctl enable snapd
 snap install pycharm-community
 flatpak install edu.mit.Scratch
 flatpak install org.apache.netbeans
+reboot
 else
 	echo "Você precisa ser root para executar a instalação do TuxOS"
 fi
