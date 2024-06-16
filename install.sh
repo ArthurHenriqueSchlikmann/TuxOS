@@ -1,6 +1,8 @@
 if[[$(whoami) = "root"]] then
 dire="null"
-cd /tmp/
+mkdir ~/.local/TuxOS/
+cd ~/.local/TuxOS/
+mkdir ./temp/
 wget https://github.com/ArthurHenriqueSchlikmann/TuxOS/releases/download/tag/pkg.tar.xz
 tar -xvf pkg.tar.gz
 mkdir -pm755 /etc/apt/keyrings
