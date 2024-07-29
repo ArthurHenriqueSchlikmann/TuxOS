@@ -9,3 +9,8 @@ div#interface {
     width: 900px;
     background-color: white;
 }
+
+p {
+    text-align: justify;
+    text-indent: 50px;
+}
