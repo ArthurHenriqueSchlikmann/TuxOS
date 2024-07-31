@@ -10,6 +10,10 @@ div#interface {
     background-color: white;
 }
 
+div#interface h1 {
+    color: black;
+}
+
 p {
     text-align: justify;
     text-indent: 50px;
