@@ -8,10 +8,17 @@ div#interface {
     margin: 1px auto 1px auto;
     width: 900px;
     background-color: white;
+    padding-left: 50px;
+    padding-bottom: 500px;
 }
 
-div#interface h1 {
+div#interface header#cabecalho {
     color: black;
+    font-size: 20pt;
+}
+
+div#interface header#cabecalho img {
+    margin-right: 10px;
 }
 
 p {
