@@ -6,4 +6,5 @@ fi
 if [[$release = "pkg.tar.gz"]]
 	https://github.com/ArthurHenriqueSchlikmann/TuxOS/releases/download/tag/pkg.tar.xz
 fi
+if [[$relase = "emule"]]
 
