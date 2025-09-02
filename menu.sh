@@ -24,6 +24,7 @@ OPTIONS=(
     "CHROMIUM" "Navegador web Chromium (versao open source do Chrome)" ON
     "SHOTWELL" "Gerenciador de fotos Shotwell" ON
     "INKSCAPE" "Editor de graficos vetoriais Inkscape" OFF
+    "BLENDER" "Programa open-source para modelagem 3d e animacao" OFF
     "AUDACITY" "Editor de audio Audacity" OFF
     "PROTONUP_QT" "Gerenciador de versoes customizadas do proton(steam)" OFF
     "LUTRIS" "Plataforma para gerenciar jogos" OFF
@@ -114,6 +115,9 @@ do
 	    wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/noble/winehq-noble.sources
 	    apt-get update
 	    apt-get install --install-recommends winehq-staging
+        ;;
+    "BLENDER")
+        snap install --classic blender
     esac
     echo ""
 done
