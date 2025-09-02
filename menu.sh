@@ -48,6 +48,7 @@ if [ $? -ne 0 ]; then
     echo "Pressione ENTER para fechar esta janela."
     read -r
     exit 0
+    clear
 fi
 
 clear # Limpa o menu da tela para exibir o progresso
@@ -125,3 +126,4 @@ done
 echo "Todos os programas selecionados foram processados!"
 echo "Pressione ENTER para fechar esta janela."
 read -r # Espera o usuario pressionar Enter para fechar o terminal
+clear
