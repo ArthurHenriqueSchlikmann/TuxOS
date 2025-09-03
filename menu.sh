@@ -25,6 +25,7 @@ OPTIONS=(
     "SHOTWELL" "Gerenciador de fotos Shotwell" ON
     "INKSCAPE" "Editor de graficos vetoriais Inkscape" OFF
     "BLENDER" "Programa open-source para modelagem 3d e animacao" OFF
+    "VSCODE" "Visual Studio Code, editor de textos open-source da Microsoft" OFF
     "AUDACITY" "Editor de audio Audacity" OFF
     "PROTONUP_QT" "Gerenciador de versoes customizadas do proton(steam)" OFF
     "LUTRIS" "Plataforma para gerenciar jogos" OFF
@@ -119,6 +120,10 @@ do
         ;;
     "BLENDER")
         snap install --classic blender
+        ;;
+    "VSCODE")
+        wget https://github.com/ArthurHenriqueSchlikmann/TuxOS/releases/download/vscode/code_1.103.2-1755709794_amd64.deb -o /tmp/vscode.deb
+        apt install /tmp/vscode.deb
     esac
     echo ""
 done
