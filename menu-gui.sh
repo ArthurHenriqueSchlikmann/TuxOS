@@ -19,14 +19,46 @@ case $categoria in
         5 "Inkscape" off \
         6 "Audacity" off \
         7 "Blender" off)
-        case $CHOICE in
-            1)
-                echo "$senha" | sudo -S apt install arduino -y
+        if [ -z "$CHOICE" ]; then
+            kdialog --sorry "Nenhum programa selecionado"
+            exit 1
+        fi
+    
+        # Divide a string de IDs em um array e itera sobre cada escolha
+        OIFS=$IFS
+        IFS='|'
+        for item in $CHOICE; do
+            case $item in
+                1)
+                    echo "$senha" | sudo -S apt install arduino -y
+                ;;
+                2)
+                    echo "$senha" | sudo -S wget -O /tmp/vscode.deb https://github.com/ArthurHenriqueSchlikmann/TuxOS/releases/download/vscode/code_1.103.2-1755709794_amd64.deb
+                    echo "$senha" | sudo -S apt install ./vscode.deb -y
+                ;;
+                3)
+                    echo "$senha" | sudo -S apt install openjdk-21-jdk
+                    echo "$senha" | sudo -S snap install netbeans --classic
+                ;;
+            4)
+                echo "$senha" | sudo -S apt install gimp -y
             ;;
-            2)
-                echo "$senha" | sudo -S wget
+            5)
+                echo "$senha" | sudo -S apt install inkscape -y
             ;;
-            esac
+            6)
+                echo "$senha" | sudo -S apt install audacity -y
+            ;;
+            7)
+                echo "$senha" | sudo -S snap install blender --classic
+            ;;
+        esac
+    done
+    IFS=$OIFS
+    ;;
+esac
+
+echo "Instalação concluída!"
     ;;
 esac
 echo ""
