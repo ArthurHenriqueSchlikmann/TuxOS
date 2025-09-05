@@ -14,7 +14,19 @@ case $categoria in
     CHOISE=$(kdialog --title "Instaldor de programas do TuxOS" --checklist "Selecione o que deseja instalar" \
         1 "Arduino IDE" off \
         2 "Visual Studio Code" off \
-        3 "Apache Netbeans IDE" off)
+        3 "Apache Netbeans IDE" off \
+        4 "GIMP" off \ 
+        5 "Inkscape" off \
+        6 "Audacity" off \
+        7 "Blender" off)
+        case $CHOICE in
+            1)
+                echo "$senha" | sudo -S apt install arduino -y
+            ;;
+            2)
+                echo "$senha" | sudo -S wget
+            ;;
+            esac
     ;;
 esac
 echo ""
