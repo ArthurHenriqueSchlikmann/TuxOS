@@ -6,10 +6,11 @@ import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
 
 public class App extends Application {
+    private Scene scene;
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("App.fxml"));
-        Scene scene = new Scene(root);
+        scene = new Scene(root);
         stage.setTitle("App Installer");
         stage.setScene(scene);
         stage.show();
@@ -18,5 +19,7 @@ public class App extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-
+    public void setRoot(String fxml) throws Exception {
+        scene.setRoot(FXMLLoader.load(getClass().getResource(fxml + ".fxml")));
+    }
 }
