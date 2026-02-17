@@ -29,6 +29,7 @@ OPTIONS=(
     "LUTRIS" "Plataforma para gerenciar jogos" OFF
     "HEROIC_GAMES_LAUNCHER" "Epic games store no linux" OFF
     "WINE" "Camada de compatibilidade (execute apps e jogos Windows com isso)" OFF
+    "LINUXTOYS" "Ferramenta para automatizar scripts que facilitam a vida" ON
 )
 
 # --- Exibe o menu usando dialog ---
@@ -122,6 +123,9 @@ do
     "VSCODE")
         wget https://github.com/ArthurHenriqueSchlikmann/TuxOS/releases/download/vscode/code_1.103.2-1755709794_amd64.deb -o /tmp/vscode.deb
         apt install /tmp/vscode.deb
+        ;;
+    "LINUXTOYS")
+        curl -fsSL https://linux.toys/install.sh | bash
     esac
     echo ""
 done
