@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-# Solicita a senha do usuário
-senha=$(kdialog --title "Instalador de programas do TuxOS" --password "Digite sua senha")
-if [ $? -eq 1 ]; then
-    kdialog --title "Instalador de programas do TuxOS" --sorry "Operação cancelada pelo usuário"
+# --- Verifica se e root ---
+if [[ $EUID -ne 0 ]]; then
+    kdialog --title "Erro" --msgbox "Este script precisa ser executado como root para instalar programas.\n\nPor favor, execute: sudo bash \"$0\""
     exit 1
 fi
 
@@ -64,7 +63,7 @@ case $categoria in
             esac
         done
     # Adicione aqui os cases para as outras categorias (Jogos, Utilidades, etc.)
-    esac
+esac
 
 echo "Instalação concluída!"
 echo ""
