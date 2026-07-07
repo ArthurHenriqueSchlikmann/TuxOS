@@ -4,8 +4,16 @@ div#pagina {
 	width: 80%;
 	height: 90%;
 	background-color: #f2f2f2;
+	margin: 100px 100px;
 }
 
 body {
 	background-color: #967123;
+}
+
+li.menu {
+	padding: 10px;
+	background-color: #ffffff;
+	width: 100%;
+	margin: auto, auto;
 }
