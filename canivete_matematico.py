@@ -72,7 +72,7 @@ class algebrica:
         monomio1 = input('Digite o primeiro monômio (máximo 2 monômios): ')
         monomio2 = input('Digite o segundo monômio: ')
         operacao = input('Digite a operação entre os monômios: [+/-]: ')
-        correto = input('A expressão', monomio1, operacao ,monomio2, 'está correta? [S/n] ')
+        correto = input('A expressão', monomio1, operacao, monomio2, 'está correta? [S/n] ')
         if(correto == 's' or correto == 'S'):
             print('Em desenvolvimento')
         else:
