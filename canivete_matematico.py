@@ -2,7 +2,9 @@
 
 class interface:
     def perguntas():
-
+        print('--------------------------------------------------')
+        print('-----------CANIVETE MATEMÁTICO - TUX OS-----------')
+        print('--------------------------------------------------')
 
 class core:
     def converter(n):
@@ -33,3 +35,4 @@ class core:
         resultado = n1 / n2
         return resultado
 
+interface.perguntas()
