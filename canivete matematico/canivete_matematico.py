@@ -21,16 +21,24 @@ class interface:
             num2 = input('Digite o segundo número: ')
             if(opcao == 1):
                 res = core.soma(num1, num2)
-                print('A resposta é', res) 
+                print('A resposta é', res)
+                core.tchau()
             if(opcao == 2):
                 res = core.subtracao(num1, num2)
                 print('A resposta é', res)
+                core.tchau()
             if(opcao == 3):
                res = core.multiplicacao(num1, num2)
                print('A resposta é', res)
+               core.tchau()
             if(opcao == 4):
-               res = core.divisao(num1, num2)
-               print('A resposta é', res)
+                if(num1 == 0 or num2 == 0):
+                   print('A resposta é 0')
+                   core.tchau()
+                else:
+                    res = core.divisao(num1, num2)
+                    print('A resposta é', res)
+                    core.tchau()
 
         else:
             if(opcao == 5):
@@ -40,6 +48,9 @@ class interface:
                 exit(1)
 
 class core:
+    def tchau():
+        print('Programa encerrado')
+
     def converter(n):
         s = int(n)
         return s
@@ -78,6 +89,6 @@ class algebrica:
             print('Em desenvolvimento')
             print('-----------------------------------------------')
         else:
-            print('Fim do programa')
+            core.tchau()
 
 interface.perguntas()
