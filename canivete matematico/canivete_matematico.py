@@ -22,23 +22,23 @@ class interface:
             if(opcao == 1):
                 res = core.soma(num1, num2)
                 print('A resposta é', res)
-                core.tchau()
+                core.tchau(0)
             if(opcao == 2):
                 res = core.subtracao(num1, num2)
                 print('A resposta é', res)
-                core.tchau()
+                core.tchau(0)
             if(opcao == 3):
                res = core.multiplicacao(num1, num2)
                print('A resposta é', res)
-               core.tchau()
+               core.tchau(0)
             if(opcao == 4):
                 if(num1 == 0 or num2 == 0):
-                   print('A resposta é 0')
-                   core.tchau()
+                    print('A resposta é 0')
+                    core.tchau(0)
                 else:
                     res = core.divisao(num1, num2)
                     print('A resposta é', res)
-                    core.tchau()
+                    core.tchau(0)
 
         else:
             if(opcao == 5):
@@ -48,8 +48,9 @@ class interface:
                 exit(1)
 
 class core:
-    def tchau():
+    def tchau(erro):
         print('Programa encerrado')
+        return erro
 
     def converter(n):
         s = int(n)
@@ -89,6 +90,6 @@ class algebrica:
             print('Em desenvolvimento')
             print('-----------------------------------------------')
         else:
-            core.tchau()
+            core.tchau(1)
 
 interface.perguntas()
