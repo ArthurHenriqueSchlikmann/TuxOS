@@ -12,6 +12,7 @@ class interface:
         print('#4 - DIVISÃO')
         print('#5 - ALGÉBRICA')
         entrada = input('Digite um número [1-5]: ')
+        print('-------------------------------------------------')
         interface.escolhas(entrada)
 
     def escolhas(opcao):
