@@ -16,7 +16,7 @@ class interface:
 
     def escolhas(opcao):
         opcao = int(opcao)
-        if(opcao == 1 or opcao == 2 or opcao == 3 or opcao == 4 or opcao == 5):
+        if(opcao == 1 or opcao == 2 or opcao == 3 or opcao == 4):
             num1 = input('Digite o primeiro número: ')
             num2 = input('Digite o segundo número: ')
             if(opcao == 1):
@@ -31,12 +31,13 @@ class interface:
             if(opcao == 4):
                res = core.divisao(num1, num2)
                print('A resposta é', res)
-            if(opcao == 5):
-                algebrica.interpretador()
 
         else:
-            print('Erro: Digite um número válido')
-            exit(1)
+            if(opcao == 5):
+                algebrica.interpretador()
+            else:
+                print('Erro: Digite um número válido')
+                exit(1)
 
 class core:
     def converter(n):
@@ -72,9 +73,10 @@ class algebrica:
         monomio1 = input('Digite o primeiro monômio (máximo 2 monômios): ')
         monomio2 = input('Digite o segundo monômio: ')
         operacao = input('Digite a operação entre os monômios: [+/-]: ')
-        correto = input('A expressão', monomio1, operacao, monomio2, 'está correta? [S/n] ')
+        correto = input(f'A expressão {monomio1} {operacao} {monomio2} está correta? [S/n] ')
         if(correto == 's' or correto == 'S'):
             print('Em desenvolvimento')
+            print('-----------------------------------------------')
         else:
             print('Fim do programa')
 
