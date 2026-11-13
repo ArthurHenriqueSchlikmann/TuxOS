@@ -21,23 +21,25 @@ class interface:
             num2 = input('Digite o segundo número: ')
             if(opcao == 1):
                 res = core.soma(num1, num2)
-                print('A resposta é', res)
+                print(f'A resposta da operação {num1} + {num2} é {res}')
                 core.tchau(0)
             if(opcao == 2):
                 res = core.subtracao(num1, num2)
-                print('A resposta é', res)
+                print(f'A resposta da operação {num1} - {num2} é {res}')
                 core.tchau(0)
             if(opcao == 3):
                res = core.multiplicacao(num1, num2)
-               print('A resposta é', res)
+               print(f'A resposta da operação {num1} X {num2} é {res}')
                core.tchau(0)
             if(opcao == 4):
-                if(num1 == 0 or num2 == 0):
-                    print('A resposta é 0')
+                num1 = core.converter(num1)
+                num2 = core.converter(num2)
+                if(num2 == 0):
+                    print('Não tem como dividir por 0')
                     core.tchau(0)
                 else:
                     res = core.divisao(num1, num2)
-                    print('A resposta é', res)
+                    print(f'A resposta da operação {num1} / {num2} é igual a {res}')
                     core.tchau(0)
 
         else:
@@ -75,8 +77,6 @@ class core:
         return resultado
 
     def divisao(n1, n2):
-        n1 = core.converter(n1)
-        n2 = core.converter(n2)
         resultado = n1 / n2
         return resultado
 
@@ -87,9 +87,14 @@ class algebrica:
         operacao = input('Digite a operação entre os monômios: [+/-]: ')
         correto = input(f'A expressão {monomio1} {operacao} {monomio2} está correta? [S/n] ')
         if(correto == 's' or correto == 'S'):
+            expressao = algebrica.parser(monomio1, monomio2, operacao)
             print('Em desenvolvimento')
             print('-----------------------------------------------')
         else:
             core.tchau(1)
+
+    def parser(monomio1, monomio2, calculo):
+       tokens = [monomio1, monomio2, calculo]
+       return tokens
 
 interface.perguntas()
