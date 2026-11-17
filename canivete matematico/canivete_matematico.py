@@ -9,7 +9,7 @@ class interface:
         print('- #2 - SUBTRAÇÃO                               - ')
         print('- #3 - MULTIPLICAÇÃO                           - ')
         print('- #4 - DIVISÃO                                 - ')
-        print('- #5 - ALGÉBRICA                               - ')
+        print('- #5 - ALGÉBRICA (em desenvolvimento)          - ')
         entrada = input('Digite um número [1-5]: ')
         print('-------------------------------------------------')
         interface.escolhas(entrada)
@@ -51,8 +51,8 @@ class interface:
 
 class core:
     def tchau(erro):
-        print('Programa encerrado')
-        return erro
+        print(f'Programa encerrado. Erro: {erro}')
+        exit(erro)
 
     def converter(n):
         s = int(n)
