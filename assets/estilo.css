@@ -8,12 +8,17 @@ div#pagina {
 }
 
 body {
-	background-color: #967123;
+	background-color: #61605eaa;
 }
 
 li.menu {
 	padding: 10px;
 	background-color: #ffffff;
 	width: 100%;
-	margin: auto, auto;
+	margin: auto;
+}
+
+li.menu a{
+	background-color: #ffffff;
+	
 }
