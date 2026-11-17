@@ -105,9 +105,8 @@ class Algebrica:
         else:
             Core.tchau(1)
 
-    def parser(monomio1, monomio2, calculo):
-       tokens = [monomio1, monomio2, calculo]
-       return tokens
+    def separador(monomio):
+        return monomio
 
 #Inicia o programa
 Interface.perguntas()
