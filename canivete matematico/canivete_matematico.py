@@ -91,7 +91,7 @@ class Core:
         resultado = n1 / n2
         return resultado
 
-# Pequeno teste de algébrica que está em desenvolvimento, mas já possui um interpretador de monômios falho
+# Pequeno teste de algébrica que está em desenvolvimento
 class Algebrica:
     def interpretador():
         monomio1 = input('Digite o primeiro monômio (máximo 2 monômios): ')
