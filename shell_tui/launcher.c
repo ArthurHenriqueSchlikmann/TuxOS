@@ -6,8 +6,8 @@ void init_colors() {
         printf("Seu terminal não suporta cores. \n");
         return;
     }
+    start_color();
     init_pair(1, COLOR_WHITE, COLOR_BLUE);
-    bkgd(COLOR_PAIR(1));
 }
 
 int main() {
@@ -15,6 +15,7 @@ int main() {
     noecho();
     curs_set(0);
     init_colors();
+    bkgd(COLOR_PAIR(1));
     mvprintw(3, 5, "Bem vindo ao Shell TUI do TUX OS");
     mvprintw(5, 5, "Pressione qualquer tecla para continuar...");
     refresh();
