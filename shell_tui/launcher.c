@@ -2,10 +2,12 @@
 
 int main() {
     initscr();
-    mvprintw(3, 10, "---LAUNCHER TUXOS---");
-    mvprintw(5, 10, "Pressione uma tecla para continuar...");
-    refresh();
-    getch();
-    endwin();
+    noecho();
+    curs_set(0);
+    if (has_colors() == FALSE) {
+        endwin();
+        printf("Seu terminal não suporta cores. \n");
+        return 1;
+    }
     return 0;
 }
